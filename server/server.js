@@ -5,7 +5,7 @@ const app = express();
 const port = process.env.PORT || 5000;
 
 // Serve the static files from the React app
-app.use(express.static(path.join(__dirname, '../client/build')));
+app.use(express.static(path.join(__dirname, '../client/public')));
 
 // An api endpoint that returns a short list of items
 app.get('/api/getList', (req,res) => {
