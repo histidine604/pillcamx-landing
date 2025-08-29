@@ -9,6 +9,8 @@ services:
       - ./server:/app
       - node_modules_server:/app/node_modules
     command: npm run dev
+    environment:
+      - CHOKIDAR_USEPOLLING=true
   client:
     build:
       context: ./client
